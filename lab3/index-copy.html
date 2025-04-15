@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe Design</title>
+  <style>
+    /* -----------------------------
+       BASIC RESET & GLOBAL STYLES
+    ------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* -----------------------------
+       HEADER & NAVIGATION
+    ------------------------------ */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav li {
+      padding: 0.5rem;
+    }
+    .search-bar {
+      margin-left: 2rem;
+      position: relative;
+    }
+    .search-bar input {
+      padding: 0.5rem 2rem 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      position: absolute;
+      right: 0.25rem;
+      top: 0.25rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: #666;
+    }
+
+    /* -----------------------------
+       HERO SECTION
+    ------------------------------ */
+    .hero {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 1.125rem;
+      color: #555;
+    }
+    .hero img {
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    /* -----------------------------
+       FEATURE GRID
+    ------------------------------ */
+    .feature-grid {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .feature-item {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      padding: 1rem;
+    }
+    .feature-item img {
+      width: 60px;
+      margin-bottom: 0.5rem;
+    }
+    .feature-item h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      color: #007BFF;
+    }
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* -----------------------------
+       SIGN-UP SECTION
+    ------------------------------ */
+    .signup-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .signup-section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .signup-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .signup-form input[type="email"] {
+      flex: 1 1 300px;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .signup-form button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background-color: #007BFF;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .signup-form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .social-icons a {
+      font-size: 1.25rem;
+      color: #007BFF;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">MyBrand</div>
+      <nav>
+        <ul>
+          <li><a href="#">Header Link 1</a></li>
+          <li><a href="#">Header Link 2</a></li>
+          <li><a href="#">Header Link 3</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button aria-label="Search">&#128269;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Headline Goes Here</h1>
+    <p>
+      A short paragraph introducing the main idea of your page. This could be a
+      tagline or brief overview that draws people in.
+    </p>
+    <!-- Large image placeholder -->
+    <img src="https://via.placeholder.com/1200x400?text=Hero+Image" alt="Hero Image" />
+  </section>
+
+  <!-- FEATURE GRID -->
+  <section class="feature-grid">
+    <!-- Example Feature Boxes -->
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/60?text=Icon" alt="Icon" />
+      <h3>Feature One</h3>
+      <p>Short description of the feature or service offered.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/60?text=Icon" alt="Icon" />
+      <h3>Feature Two</h3>
+      <p>Short description of the feature or service offered.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/60?text=Icon" alt="Icon" />
+      <h3>Feature Three</h3>
+      <p>Short description of the feature or service offered.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/60?text=Icon" alt="Icon" />
+      <h3>Feature Four</h3>
+      <p>Short description of the feature or service offered.</p>
+    </div>
+  </section>
+
+  <!-- SIGN-UP SECTION -->
+  <section class="signup-section">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter to receive the latest news and updates.</p>
+    <form class="signup-form">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#">Navigation 1</a></li>
+          <li><a href="#">Navigation 2</a></li>
+          <li><a href="#">Navigation 3</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <!-- Simple text placeholders for social icons -->
+        <a href="#" aria-label="LinkedIn">&#xe252;</a>
+        <a href="#" aria-label="Twitter">&#xe250;</a>
+        <a href="#" aria-label="Facebook">&#xe253;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

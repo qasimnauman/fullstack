@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .profile {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-header h2 {
+      color: #333;
+    }
+
+    .profile-header a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .profile-picture img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .profile-info {
+      display: flex;
+    }
+
+    .profile-details {
+      flex-grow: 1;
+    }
+
+    .profile-details p {
+      margin-bottom: 10px;
+    }
+
+    .profile-details strong {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <div class="profile-header">
+          <h2>User Profile</h2>
+          <a href="#">Edit Profile</a>
+        </div>
+        <div class="profile-info">
+          <div class="profile-picture">
+            <img
+              src="https://media.istockphoto.com/id/1309696402/photo/headshot-of-mid-adult-british-asian-woman-wearing-hijab.jpg?s=612x612&w=0&k=20&c=gX63iUlxK82_9OiAM9KBeHBN8y2yUIupuQquESwkKiw="
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="profile-details">
+            <p><strong>Name:</strong> Mishkat Fatima</p>
+            <p><strong>Email:</strong> 221336@students.au.edu.pk</p>
+            <p><strong>Location:</strong> Islamabad</p>
+            <p><strong>Bio:</strong> Computer Science Undergrad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navid" id="navid">
+      <div class="nav-left">
+        <img class="nav-logo" src="" alt="nav-logo" />
+        <label class="logo">Portfolio</label>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+
+      <ul class="nav-links">
+        <li>
+          <a class="active" href="#home"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="#about"><i class="fas fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="#products"
+            ><i class="fas fa-project-diagram"></i> Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact"><i class="fas fa-address-card"></i> Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="home" class="home-section">
+      <div class="slider">
+        <input type="radio" name="slider" id="slide1" checked />
+        <input type="radio" name="slider" id="slide2" />
+        <input type="radio" name="slider" id="slide3" />
+        <div class="slides">
+          <div class="slide">
+            <img src="https://wowslider.com/sliders/demo-18/data1/images/shanghai.jpg" alt="image1" />
+          </div>
+          <div class="slide">
+            <img src="https://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" alt="image2" />
+          </div>
+          <div class="slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSfmsaYw5QJAt7OkjG7RLcTtYyxYFQTZOSA&s" alt="image3" />
+          </div>
+        </div>
+
+        <div class="arrow-button">
+          <label for="slide3" class="prev-slide1"></label>
+          <label for="slide2" class="next-slide1"></label>
+
+          <label for="slide1" class="prev-slide2"></label>
+          <label for="slide3" class="next-slide2"></label>
+
+          <label for="slide2" class="prev-slide3"></label>
+          <label for="slide1" class="next-slide3"></label>
+        </div>
+
+        <a href="#navid" class="back-to-top">Top</a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <div class="about-description">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our Perfumes store. We are a team of enthusiastic
+            developers and entrepreneurs who decided to convert their common
+            experience into this web store. We hope you’ll like it as much as we
+            do and have a great shopping experience here. Our prime goal is to
+            create a shop in which you can easily find whatever product you
+            need.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="" alt="about-image" />
+        </div>
+      </div>
+      <a href="#navid" class="back-to-top">Top</a>
+    </section>
+
+    <section id="products" class="products-section">
+      <div>
+        <h2>Our Products</h2>
+      </div>
+      <div class="product-slider">
+        <input type="radio" name="prod-slider" id="prod-slide1" checked />
+        <input type="radio" name="prod-slider" id="prod-slide2" />
+
+        <div class="prod-slides">
+          <div class="prod-slide">
+            <div class="product-card">
+              <img src="" alt="product-card1" />
+              <h3>Product 1</h3>
+              <p>Price: $100</p>
+            </div>
+            <div class="product-card">
+              <img src="" alt="product-card2" />
+              <h3>Product 2</h3>
+              <p>Price: $100</p>
+            </div>
+            <div class="product-card">
+              <img src="" alt="product-card3" />
+              <h3>Product 3</h3>
+              <p>Price: $420</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-arrow-button">
+          <label for="prod-slide2" class="next-prod"></label>
+          <label for="prod-slide1" class="prev-prod"></label>
+        </div>
+      </div>
+      <a href="#navid" class="back-to-top">Top</a>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

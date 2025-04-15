@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="information-section">
+        <h1 class="info-heading">REGISTER YOURSELF</h1>
+        <p class="info-description">
+          Insert your information and get register yourself. All fields are
+          required.
+        </p>
+      </div>
+
+      <div class="form-section">
+        <div class="newsletter-button">
+          <h2>Sign up for our newsletter</h2>
+        </div>
+
+        <form class="registeration-form">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input
+            type="password"
+            placeholder="Password"
+            pattern=".{6,}"
+            required
+          />
+          <button type="submit" class="btn-offer">CLAIM YOUR OFFER</button>
+        </form>
+
+        <p class="tandC">
+          By claiming the offer, you are agreeing to our
+          <a href="#">Terms and Services</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

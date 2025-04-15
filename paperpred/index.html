@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      /* Style the header */
+      .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+      }
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      /* Style the topnav links */
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Responsive layout - makes the three columns stack on top of each other instead
+of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+    <button onclick="navigateto()">
+        Navigate
+    </button>
+    <script>
+      const para = document.createElement("p");
+      const node = document.createTextNode("This is new.");
+      para.appendChild(node);
+      const element = document.getElementById("div1");
+      element.appendChild(para);
+      var nodeList = document.querySelectorAll("p");
+      console.log(nodeList);
+      console.log("Java Enable Check: ",navigator.javaEnabled());
+      console.log(navigator.geolocation.getCurrentPosition(
+        function (position) {
+          console.log("Latitude: " + position.coords.latitude);
+          console.log("Longitude: " + position.coords.longitude);
+        },
+        function (error) {
+          console.error("Error occurred. Error code: " + error.code);
+        }
+      ));
+
+      console.log(screen.width, screen.colorDepth, screen.height, screen.availWidth, screen.availHeight, screen.orientation.type, screen.orientation.angle);
+      console.log(window.innerWidth, window.innerHeight, window.outerWidth, window.outerHeight, window.location.href, window.location.hostname, window.location.pathname, window.location.protocol, window.location.port);
+
+      navigateto = () =>{
+        window.location.assign("https://cyberoide.tech/");
+      }
+
+      console.log(
+        location.origin,
+        location.href,
+        location.host,
+        location.hash,
+        location.hostname,
+        location.pathname,
+        location.port,
+        location.protocol,
+        location.search,
+      )
+    </script>
+  </body>
+</html>

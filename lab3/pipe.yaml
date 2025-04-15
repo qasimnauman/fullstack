@@ -1,0 +1,36 @@
+name: Deploy to AWS EC2 via Bastion
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up SSH Authentication
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.BASTION_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
+          echo -e "StrictHostKeyChecking no\n" >> ~/.ssh/config
+
+      - name: Add Bastion and Target Host Keys to Known Hosts
+        run: |
+          ssh-keyscan -H ${{ secrets.BASTION_HOST }} >> ~/.ssh/known_hosts || true
+          ssh-keyscan -H ${{ secrets.AWS_TARGET_HOST }} >> ~/.ssh/known_hosts || true
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy Code via Bastion Host with ProxyCommand
+        run: |
+          ssh -o "ProxyCommand=ssh -W %h:%p -i ${{ secrets.BASTION_SSH_KEY }} ec2-user@{{ secrets.BASTION_HOST }}" -i {{ secrets.TARGET_SSH_KEY }} ec2-user@{{ secrets.AWS_TARGET_HOST }} << 'EOF'
+          cd /var/www/${{ github.event.repository.name }}
+          git pull origin main
+          EOF

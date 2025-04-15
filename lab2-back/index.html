@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="info-section">
+        <h1>Welcome to Our Community</h1>
+        <p>Join us Today</p>
+      </section>
+
+      <!-- Login Se ction
+      <section class="form-control login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <input type="text" id="login-id" placeholder="Email or Username" required />
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" placeholder="Password" required />
+          </div>
+          <div class="input-group">
+            <button type="submit" class="submit-button">Login</button>
+          </div>
+          <div class="forgot-password">
+            <a href="#" id="forgot-password-link">Forgot Password?</a>
+          </div>
+          <div id="login-error" class="error-message" style="display:none;">
+            Incorrect ID or Password
+          </div>
+        </form>
+      </section> -->
+
+      <!-- Registration Section -->
+      <section class="form-control register-section">
+        <h2>Register Now</h2>
+        <form id="register-form">
+          <div class="input-group">
+            <input type="text" id="first-name" placeholder="First Name" />
+          </div>
+          <div class="input-group">
+            <input type="text" id="last-name" placeholder="Last Name" />
+          </div>
+          <div class="input-group">
+            <input type="text" id="phone" placeholder="Phone" />
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+              pattern=".{6,}"
+            />
+            <span class="validation-message">Minimum 6 character required</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+              pattern=".{6,}"
+            />
+            <span class="validation-message">Minimum 6 character required</span>
+          </div>
+          <div class="input-group">
+            <button type="submit" class="submit-button">Submit</button>
+            <p class="terms">
+              By signing up you agree to our terms and conditions.
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <!-- Forgot Password Modal -->
+      <div id="forgot-password-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <h2>Reset Password</h2>
+          <form id="forgot-password-form">
+            <div class="input-group">
+              <input type="email" id="reset-email" placeholder="Enter your email" required />
+            </div>
+            <div class="input-group">
+              <button type="submit" class="submit-button">Reset Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

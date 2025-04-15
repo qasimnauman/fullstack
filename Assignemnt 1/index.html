@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Router</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/404.css" />
+    <link rel="stylesheet" href="css/message.css">
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="#dashboard" class="logo">
+        <img
+          src="assets/images/connecfriend.png"
+          alt="Icon"
+          class="logo-icon"
+        />
+        ConnecFriend
+      </a>
+
+      <ul>
+        <li>
+          <form class="search-form" action="#">
+            <input type="text" placeholder="Search..." />
+            <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
+          </form>
+        </li>
+        <li><a class="active" href="#dashboard">Home</a></li>
+        <li><a href="#dashboard">Messages</a></li>
+        <li><a href="#dashboard">Notifications</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            <img
+              src="https://full-stack--bucket.s3.us-east-1.amazonaws.com/Qasim-Profile.jpg"
+              alt=""
+              class="profile-icon"
+            />
+          </a>
+          <div class="dropdown-menu">
+            <a href="#profile">View Profile</a>
+            <a href="#dashboard">Settings</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="content"></div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.726.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

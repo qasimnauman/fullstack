@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fingerprint on Button Click</title>
+</head>
+<body>
+  <button id="getFingerprintBtn">Get Fingerprint</button>
+  
+  <script>
+    // Load FingerprintJS library on page load
+    const fpPromise = import('https://fpjscdn.net/v3/3YwB55ChwcpbO3iytjn7')
+      .then(FingerprintJS => FingerprintJS.load({
+        region: "ap"  // Change region if needed
+      }))
+      .catch(error => console.error('Error loading FingerprintJS:', error));
+
+    // Add click event listener to the button
+    document.getElementById('getFingerprintBtn').addEventListener('click', () => {
+      fpPromise
+        .then(fp => fp.get())
+        .then(result => {
+          const visitorId = result.visitorId;
+          console.log('Visitor ID:', visitorId);
+          // You can also display it on the page or send it to your backend:
+          // document.getElementById('output').textContent = visitorId;
+        })
+        .catch(error => console.error('Error getting fingerprint:', error));
+    });
+  </script>
+</body>
+</html>
