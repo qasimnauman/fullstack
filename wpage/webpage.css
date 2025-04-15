@@ -1,0 +1,418 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+    background: #032b49;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;  
+    z-index: 1000; 
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+label.logo {
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.home-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.slider input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-buttons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.arrow-buttons label {
+    pointer-events: all;
+    font-size: 2rem;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.arrow-buttons label:hover {
+    opacity: 1;
+}
+
+#slide1:checked~.slides {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-200%);
+}
+
+.arrow-buttons label {
+    display: none;
+}
+
+#slide1:checked~.arrow-buttons .prev-slide1,
+#slide1:checked~.arrow-buttons .next-slide1 {
+    display: block;
+}
+
+#slide2:checked~.arrow-buttons .prev-slide2,
+#slide2:checked~.arrow-buttons .next-slide2 {
+    display: block;
+}
+
+#slide3:checked~.arrow-buttons .prev-slide3,
+#slide3:checked~.arrow-buttons .next-slide3 {
+    display: block;
+}
+
+.prev-slide1::before,
+.prev-slide2::before,
+.prev-slide3::before {
+    content: "<";
+}
+
+.next-slide1::before,
+.next-slide2::before,
+.next-slide3::before {
+    content: ">";
+}
+
+.about-section {
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+.about-description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products-section {
+    padding: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.product-slider {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.product-slider input {
+    display: none;
+}
+
+.prod-slides {
+    display: flex;
+    width: 200%;
+    transition: all 0.5s ease;
+}
+
+.prod-slide {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.prod-arrow-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.prod-arrow-buttons label {
+    pointer-events: all;
+    font-size: 2rem;
+    color: #032b49;
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.prod-arrow-buttons label:hover {
+    opacity: 1;
+}
+
+#prod-slide1:checked~.prod-slides {
+    transform: translateX(0);
+}
+
+#prod-slide2:checked~.prod-slides {
+    transform: translateX(-50%);
+}
+
+.contact-section {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.feedback-section {
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-form button {
+    padding: 10px;
+    border: none;
+    background: #032b49;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background: #032b49;
+    color: white;
+    padding: 20px 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content .quick-links ul {
+    list-style: none;
+}
+
+.footer-content .quick-links ul li {
+    margin: 5px 0;
+}
+
+.footer-content .quick-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content .map iframe {
+    border: 0;
+    width: 300px;
+    height: 200px;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background: #032b49;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #1b9bff;
+}
+
+@media (max-width: 1050px) {
+    label.logo {
+        font-size: 22px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 890px) {
+    .checkbtn {
+        display: block;
+    }
+    label.logo {
+        font-size: 22px;
+    }
+    nav ul {
+        position: fixed;
+        z-index: 1000;      
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
